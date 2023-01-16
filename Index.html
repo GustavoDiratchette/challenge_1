@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <script src="encriptador.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>EncriptadorGAD</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="Style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="shortcut icon" href="Imagenes/icon_llave2.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">    
+    </head>
+    
+    <body>
+
+       <header>
+            <div class="caja">
+                <br>
+                <br>
+                <div class="letra">
+                    <h1><img src="Imagenes/Vector.png" alt="letraAlura"></h1>
+                    
+                </div>
+            </div>
+       </header>
+
+        
+        <main>
+            <section class="principal">
+                <h2 class="titulo-principal">ENCRIPTADOR / DESENCRIPTADOR DE TEXTO</h2>
+            </section>
+            <form name="formulario">
+                <div class="textos">
+                    <div class="textoOriginal">
+                        <p>TEXTO ORIGINAL</p>
+                        <hr>
+                        <br>
+                        <textarea id="mensajeOriginal" rows="15" cols="2" autofocus placeholder="escriba el texto que desea encriptar/desencriptar"></textarea>
+                        <br> 
+                        <br>
+                        <h3>Número de caracteres texto original <input type="Text" id="numCaracteres" size="4" ></h3>
+                        <br>
+                        <hr>
+                    </div>           
+                    <div class="textoModificado">
+                        <p>TEXTO MODIFICADO</p>
+                        <hr>
+                        <br>
+                        <textarea readonly="readonly" id="mensajeModificado" rows="15" cols="70">Texto encriptado/desencriptado</textarea>
+                        <br> 
+                        <br>
+                        <h3>Número de caracteres texto modificado <input type="Text" id="numCaracteresModificado" size="4" ></h3>
+                        <br>
+                        <hr>
+                    </div>
+                    
+                    <div id="soloMuñeco">
+                        <img src="Imagenes/Muñeco.png" id="muñeco" alt="inspector">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                
+                <div class="restriccion">
+                    <p>👁 Solo letras en minúscula y sin acento. <strong>Se reemplazaran mayúsculas y se eliminaran acentos</strong></p>               
+                </div>
+            
+                <section class="botones">
+                    <input type=button value="Encriptar" class="boton1" onclick="minuscula(),acento(),encriptar(),cuenta(),cuentaModif(),habilitarBoton(this),ocultarTablero()">
+                    <input type=button value="Desencriptar" class="boton1" onclick="desencriptar(),cuenta(),cuentaModif(),habilitarBoton(this),ocultarTablero()"> 
+                    <input type=button value="Copiar" id="boton2" onclick="this.disabled = true,copiaTexto(),borrarTexto(),cuentaModif()">
+                    <button type="reset" class="reset" onclick="habilitarBoton(this)">Limpiar</button>
+                   
+                    <!--<input type=button value="Copiar tex" onclick="copiaTexto(),ocultarTablero()">
+                    <input type=button value="Ocultar" onclick="ocultarTablero()"> -->
+                </section>
+                
+            </form>
+           
+        </main>
+
+        <footer>
+           <img src="Imagenes/icon_llave2.png" width="50px" height="50px" alt="logo2">
+            <p class="copyright">&copy Copyrigh EncriptadorGAD - 2023 -Córdoba - Argentina </p>
+            <br>
+        </footer>
+       
+    </body>
+    
+</html>
